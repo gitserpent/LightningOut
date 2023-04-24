@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <script src="https://innovation-ability-7744.scratch.my.site.com/lightning/lightning.out.js"></script>
+    
+    <div data-lightning-out="true"></div>
+
+  <script>
+
+    const appName = 'DIRSCORE:iFrameApp';
+    const componentName = 'DIRSCORE:DocumentsLandingPage';
+    const lightningEndpoint = 'https://innovation-ability-7744.scratch.my.site.com';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {
+
+    };
+
+    $Lightning.use(
+            appName,
+            function (){
+              $Lightning.createComponent(
+                      componentName,
+                      componentAttributes,
+                      targetElement,
+                      function (cmp){
+                        console.log('lightning component created');
+                      }
+              );
+            },
+            lightningEndpoint
+    );
+
+
+  </script>
+</html>
